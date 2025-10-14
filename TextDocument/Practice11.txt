@@ -1,0 +1,38 @@
+Practice:
+
+WebDriver driver= new ChromeDriver();
+driver.get("url");
+
+List<WebElement> links= driver.findElements(By.xpath("locator"));
+
+for(int i=0; i<links.size(); i++)
+{
+  String linkText= links.get(i).getText();
+  System.out.println("Links present: "+linkText);
+}
+
+
+WebDriver driver= new ChromeDriver();
+driver.get("url");
+
+String contact= driver.findElement(By.xpath("//table[@id='customer']//tr[2]//td[2]"));
+System.out.println("Contact for Raj"+ contact);
+
+int totalRows= driver.findElement(By.xpath("//table[@id='customer']//tr")).size();
+System.out.println("Total Rows: "+ totalRows);
+
+int totalCells= driver.findElement(By.xpath("//table[@id='customer']//tr//td")).size();
+System.out.println("Total Cells: "+ totalCells);
+
+for(int r=2; r<=totalRows; r++)
+{
+  for(int c=1; c<=totalCells; c++)
+{
+    String table= driver.findElement(By.xpath("//table[@id='customer']//tr["+r+"]//td["+c+"]")).getText();
+    System.out.println("Whole Table: "+table+"\t");
+}
+System.out.println();
+
+}
+
+

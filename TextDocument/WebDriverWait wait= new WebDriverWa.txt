@@ -1,0 +1,3 @@
+WebDriverWait wait= new WebDriverWait(Duration.ofSeconds(10),driver);
+
+WebElement ele= wait.until(ExpectedCondions.alertIsPresent(),"locator");

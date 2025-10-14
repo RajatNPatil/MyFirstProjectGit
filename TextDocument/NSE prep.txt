@@ -1,0 +1,73 @@
+NSE prep:
+
+
+"not" in xpath:(example for google language links for exclude Hindi and Marathi)= //div[@id="SIvCob"]/a[not (text()="हिन्दी") and not (text()="मराठी")]
+
+Using starts-with()
+Matches elements whose attribute starts with a specific string= //div[starts-with(@class, 'alert')]
+
+
+
+
+what is the git stash command used for?
+-> The git stash command is used to temporarily save changes in your working directory that you’re not ready to commit. It’s especially useful when you need to switch branches or pull updates but don’t want to lose or commit your current work.
+
+commonly used Git commands for testing?
+-> *Basic Testing & Inspection
+git status
+Shows the current state of the working directory and staging area.
+
+git diff
+Displays changes between working directory and index (or between commits).
+
+git log
+Shows commit history—useful for tracking changes and debugging.
+
+git show <commit>
+Displays details of a specific commit, including changes.
+
+ *Branching for Testing
+git branch <branch-name>
+Creates a new branch for isolated testing.
+
+git checkout <branch-name>
+Switches to a different branch.
+
+git switch -c <new-branch>
+Creates and switches to a new branch (modern alternative to checkout).
+
+*Stashing for Temporary Work
+git stash
+Temporarily saves uncommitted changes.
+
+git stash apply / git stash pop
+Reapplies stashed changes.
+
+*Resetting & Reverting
+git reset --hard <commit>
+Resets working directory and index to a specific commit (⚠️ destructive).
+
+git revert <commit>
+Creates a new commit that undoes the changes from a previous commit (safe for shared branches).
+
+*Cleaning Up
+git clean -fd
+Removes untracked files and directories (use with caution).
+
+*Testing with Tags
+git tag <tag-name>
+Marks a specific commit (e.g., for release testing).
+
+git checkout <tag-name>
+Checks out a tagged version (in detached HEAD state).
+
+*Testing Remote Changes
+git fetch
+Retrieves latest changes from remote without merging.
+
+git pull
+Fetches and merges changes from remote.
+
+git cherry-pick <commit>
+Applies a specific commit from another branch—great for testing isolated changes.
+

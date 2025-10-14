@@ -1,0 +1,105 @@
+Practice:
+
+Get excel data:
+
+FileInputStream file= new FileInputStream(System.getProperty("user.dir")+"\\Data\\ExcelData.xlsx");
+XSSFWorkbook wk= new XSSFWorkbook(file);
+XSSFSheet sheet= wk.getSheet("SheetName");
+
+//Finding total numbers of rows and columns
+
+int totalRow= sheet.getLastRowNum();
+int totalCell= sheet.getRow(1).getLastCellNum();
+
+
+for(int r=0; r<=totalRow; r++)
+{
+   XSSFRow currentRow= sheet.getRow(r);
+
+   for(int c=0; c<totalCell; c++)
+{
+   XSSFCell Cell= currentRow.getCell(c);
+   System.out.println(Cell.toString());
+}
+}
+
+wk.close();
+file.close();
+
+
+
+
+Create data in excel:
+
+FileOutputStream file= new FileOutputStream(System.getProperty("user.dir")+"\\TestData\\MyData.xlsx");
+XSSFWorkbook wk= new XSSFWorkbook();
+XSSFSheet sheet= wk.createSheet("SheetName");
+
+XSSFRow row1= sheet.createRow(0);
+
+row1.createCell(0).setCellValue("1");
+row1.createCell(1).setCellValue("java");
+row1.createCell(2).setCellValue("selenium");
+
+XSSFRow row2= sheet.createRow(1);
+
+row2.createCell(0).setCellValue("2");
+row2.createCell(1).setCellValue("python");
+row2.createCell(2).setCellValue("playwright");
+
+XSSFRow row3= sheet.createRow(2);
+
+row3.createCell(0).setCellValue("3");
+row3.createCell(1).setCellValue("javascript");
+row3.createCell(2).setCellValue("cypress");
+
+wk.write(file);
+wk.close();
+file.close();
+
+System.out.println("File is created");
+
+
+
+Create data in excel using dynamic data:
+
+FileOutputStream file= new FileOutputStream(System.getProperty("user.dir")+"\\Data\\ExcelData.xlsx");
+XSSFWorkbook wk= new XSSFWorkbook();
+XSSFSheet sheet= wk.createSheet("SheetName");
+
+Scanner sc= new Scanner(System.in);
+System.out.println("enter the number of rows");
+int rows= sc.nextInt();
+
+System.out.println("enter the number of cells");
+int cells= sc.nextInt();
+
+for(int r=0; r<=rows; r++)
+{
+   XSSFRow currentRow= sheet.crateRow(r);
+
+   for(int c=0; c<cells; c++)
+{
+   XSSFCell Cell= currentRow.createCell(c);
+   Cell.setCellValue(sc.next());
+}
+}
+
+wk.write(file);
+wk.close();
+file.close();
+
+System.out.println("File is created");
+
+
+
+
+@Test
+public Object[][] loginData()
+{
+   return new Object[][] Data
+   {
+     
+
+
+

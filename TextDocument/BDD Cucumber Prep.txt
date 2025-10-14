@@ -1,0 +1,147 @@
+BDD Cucumber Prep:
+
+ Conceptual Questions
+What is BDD and how is it different from TDD?
+What are the benefits of using BDD in software testing?
+What is Cucumber and how does it support BDD?
+What is a feature file in Cucumber?
+Explain Gherkin syntax. What are its key components?
+What is the role of Given/When/Then in BDD?
+How does Cucumber integrate with Selenium or other automation tools?
+What are step definitions in Cucumber?
+How do you handle data-driven testing in Cucumber?
+What are hooks in Cucumber and how are they used?
+
+Practical/Technical Questions
+How do you write reusable step definitions?
+How do you organize feature files and step definitions in a project?
+How do you pass parameters in step definitions?
+How do you handle setup and teardown in Cucumber tests?
+How do you run specific scenarios or tags in Cucumber?
+How do you generate Cucumber reports?
+How do you handle assertions in Cucumber?
+How do you integrate Cucumber with CI/CD pipelines?
+How do you manage test data in BDD scenarios?
+How do you handle scenario outlines and examples in Cucumber?
+
+Advanced/Integration Questions
+How do you integrate Cucumber with JUnit/TestNG?
+How do you handle parallel execution in Cucumber?
+How do you deal with flaky tests in BDD frameworks?
+How do you mock APIs or services in BDD tests?
+How do you maintain BDD tests in large-scale projects?
+
+
+
+1. What is BDD and how is it different from TDD?
+-> BDD (Behavior-Driven Development) is a software development approach that focuses on the behavior of an application from the end user's perspective. It encourages collaboration between developers, testers, and business stakeholders using natural language descriptions.
+-Difference from TDD:
+TDD focuses on writing unit tests before code.
+BDD focuses on writing behavior specifications in a human-readable format (e.g., Given-When-Then).
+BDD uses tools like Cucumber, while TDD uses unit testing frameworks like JUnit or NUnit.
+
+2. What are the benefits of using BDD in software testing?
+-> 
+
+2. What is Cucumber and how does it support BDD?
+-> Cucumber is an open-source tool that supports BDD by allowing you to write test cases in plain English using Gherkin syntax. These test cases are stored in feature files and linked to step definitions written in code (Java, JavaScript, etc.).
+
+3. What is a feature file in Cucumber?
+-> A feature file is a plain text file written in Gherkin syntax that describes a software feature and its scenarios. Each scenario outlines a specific behavior using Given-When-Then steps.
+		
+Feature: Login functionality
+
+Scenario: Successful login
+  Given the user is on the login page
+  When the user enters valid credentials
+  Then the user should be redirected to the dashboard
+
+4. What are step definitions in Cucumber?
+-> Step definitions are the actual code implementations that map to the steps written in the feature file. They define what actions should be performed for each step.
+
+@Given("the user is on the login page")
+public void userOnLoginPage() {
+    driver.get("https://example.com/login");
+}
+
+5. How do you handle data-driven testing in Cucumber?
+-> Cucumber supports data-driven testing using Scenario Outline and Examples.
+
+Scenario Outline: Login with multiple credentials
+  Given the user is on the login page
+  When the user enters "<username>" and "<password>"
+  Then the user should see "<message>"
+
+Examples:
+  | username | password | message              |
+  | user1    | pass1    | Welcome user1        |
+  | user2    | pass2    | Welcome user2        |
+
+6. What are hooks in Cucumber and how are they used?
+-> Hooks are blocks of code that run before or after each scenario. They are used for setup and teardown tasks like launching browsers, initializing data, or cleaning up.
+
+@Before
+public void setUp() {
+    // Launch browser
+}
+
+@After
+public void tearDown() {
+    // Close browser
+}
+
+7.what is dry run in bdd cucumber
+-> In BDD with Cucumber, a dry run refers to executing the test suite without actually running the step definitions. It's a way to validate the mapping between feature file steps and step definitions.
+Purpose of a Dry Run
+
+Check for missing step definitions.
+Ensure all steps in your .feature files are correctly linked to corresponding code.
+Quick feedback without executing the actual test logic.
+
+@CucumberOptions(
+    features = "src/test/resources/features",
+    glue = "stepDefinitions",
+    dryRun = true
+)
+
+8. what are the different cucumber options in bdd?
+-> In BDD with Cucumber, @CucumberOptions is used to configure how Cucumber runs your tests. These options are typically set in the test runner class (e.g., using JUnit in Java). Here's a breakdown of the most commonly used Cucumber options:
+
+features= Path to the .feature files. Example: "src/test/resources/features"
+
+glue= Package(s) containing step definitions and hooks. Example: "stepDefinitions"
+
+plugin= Used to specify output formats (e.g., HTML, JSON, pretty). Example: {"pretty", "html:target/cucumber-reports"}
+
+tags= Run scenarios with specific tags. Example: "@SmokeTest" or "not @Ignore"
+
+dryRun= If true, checks if all steps have definitions without executing them. Useful for validation.
+
+monochrome= If true, removes extra characters from console output for better readability.
+
+name= Filters scenarios by name. Example: "Login" will run scenarios with "Login" in their title.
+
+strict= Deprecated in newer versions. Previously used to fail execution if there were undefined or pending steps.
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+    features = "src/test/resources/features",
+    glue = "stepDefinitions",
+    plugin = {"pretty", "html:target/cucumber-reports"},
+    tags = "@SmokeTest",
+    dryRun = false,
+    monochrome = true
+)
+public class TestRunner {}
+
+
+
+
+
+
+
+
+
+
+
+

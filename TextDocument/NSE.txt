@@ -1,0 +1,25 @@
+NSE:
+
+@Test(dataProvider="login")
+public void setup(String email, String pwd)
+{
+	//code to use the data
+	driver.findElement(locator).sendKeys(email);
+	driver.findElement(locator).sendKeys(pwd);
+
+}
+
+@DataProvider(name="login")
+String [][] loginData{
+
+   String [][]data(){
+
+	{"email","pwd"},{"email","pwd"},{"email","pwd"}
+};
+	return data;
+}
+
+Find xpath from table: //strong[text()="Angola"]/following::td[@style="width: 122.667px;"][1]  (site url: https://cosmocode.io/automation-practice-webtable/)
+
+Write a java program to find unique word?
+String s= "my name is my Rajat Rajat";

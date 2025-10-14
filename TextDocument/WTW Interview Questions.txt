@@ -1,0 +1,430 @@
+WTW Interview Questions:
+
+Manual:
+
+1. example of where severity is low and priority is high and other combinations?
+-> Severity refers to the impact of a bug on the system's functionality, while priority refers to the urgency with which a bug needs to be fixed.
+1. High Priority, Low Severity:
+Example:
+A typo in the company name on the homepage. The typo doesn't affect functionality (low severity) but it's important to fix it quickly to maintain a professional image (high priority).
+2. High Priority, High Severity:
+Example:
+A bug that prevents users from completing an online purchase after submitting payment information. This impacts a core function (high severity) and needs immediate attention (high priority).
+3. Low Priority, High Severity:
+Example:
+A bug in a rarely accessed report generation feature that, when it fails, requires significant effort to correct. While it impacts functionality (high severity), it's low priority due to infrequent use.
+4. Low Priority, Low Severity:
+Example:
+A minor typo in a paragraph of text on a page that isn't critical for the application's function. This is low severity (no functional impact) and low priority (can be fixed at a later time).
+
+
+2. If Application name is incorrect then what could be the bug title, bug description, severity and priority?
+-> Title: Incorrect application name as it is showing "Facebuk" instead of "Facebook".
+   Description: On the Facebook application home page, the application name is incorrect as it is showing "Facebuk" which should be "Facebook".
+   Steps: 1. Go to the apllication Facebook by using url: https://www.Facebook.com/
+          2. Login with valid creds into the application
+          3. Go to the home page and check for the application name
+	  4. There you can see the application name is incorrect.
+
+Expected versus actual results:
+Screenshots or video recordings illustrating the issue:
+Environment details:
+
+Severity: Low (As it is not impacting the functionality of the application)
+Priority: High (As it is impacting the brand image of the company)
+
+
+3. test cases for login scenario - there are 3 fields on login page : username, password and login button.
+-> Functional Test Cases:
+Valid Login: Verify successful login with a valid username and password, leading to the expected post-login page.
+Enter Key Login: Verify successful login with valid credentials by pressing the Enter key after inputting the password.
+Password Masking: Confirm that the password field masks the characters entered.
+
+Negative Test Cases:
+Invalid Username/Password: Verify that login fails with an invalid username and/or password, and an appropriate error message is displayed. Test various combinations (e.g., invalid username, valid password; valid username, invalid password; both invalid).
+Empty Fields: Verify that an error message is displayed when either the username or password field is left blank upon clicking the login button.
+Incorrect Case Sensitivity: If applicable, test login with incorrect case for username/password to confirm expected behavior (e.g., if case-sensitive, login should fail).
+SQL Injection/Cross-Site Scripting (XSS): Attempt to inject malicious scripts or SQL commands into the username and password fields to ensure proper handling and security.
+Max Length Input: Test inputting values exceeding the defined maximum length for username and password fields to verify truncation or error handling.
+
+Usability and UI Test Cases:
+Cursor Focus: Verify that the cursor automatically focuses on the username field when the login page loads.
+Tab Navigation: Confirm that users can navigate between the username, password, and login button using the Tab key.
+Error Message Clarity: Ensure error messages are clear, concise, and helpful to the user.
+Login Button State: Verify the login button's state (e.g., enabled/disabled) based on input validity.
+Password Copy/Paste: Test if copy-pasting into the password field is allowed or restricted based on security requirements.
+
+
+4. what could be the bugs on this page and what will be the bug title and bug details?
+-> 
+
+5. how do you select regression test cases and when do you execute regression suite?
+-> Regression test cases are selected based on the changes made to the software, prioritizing critical functionalities, areas with frequent bugs, and integration points. The regression suite is executed after every change to the code or environment, typically at the end of each development iteration.
+
+
+6. how to select test cases for automation?
+-> To effectively select test cases for automation, focus on test cases that are frequently executed, time-consuming, complex, prone to human error, or critical for application functionality. Consider factors like test stability, data-driven potential, and the ability to reuse components. Prioritize test cases based on their criticality, potential impact on users, and the time required for execution.
+
+7. explain day to day activity?
+-> Automation Testers develop and execute software tests to identify software problems and their causes. Test system modifications to prepare for implementation. Document software and application defects using a bug tracking system and report defects to software or web developers. Create and maintain databases of known defects. May participate in software design reviews to provide input on functional requirements, operational characteristics, product designs, and schedules
+
+
+8. what are the agile ceremony?
+-> Agile ceremonies are structured events within agile project management, particularly in Scrum, that help teams plan, track progress, and improve their processes. The four key ceremonies are Sprint Planning, Daily Stand-up, Sprint Review, and Sprint Retrospective.
+
+
+9. Day to day activities - how will you start your day?
+-> 
+
+
+10. Day to day routine?
+-> 
+
+
+11. what if we have bug in UAT and not in SIT/QA env?
+-> Immediate Action & Documentation:
+Verify and Reproduce: 
+The tester must first attempt to reproduce the bug in the UAT environment to confirm its existence and understand its behavior.
+Detailed Bug Reporting: Create a comprehensive bug report including:
+Clear and concise title.
+Detailed steps to reproduce the bug in UAT.
+Expected versus actual results.
+Screenshots or video recordings illustrating the issue.
+Environment details (browser, operating system, specific UAT setup).
+Severity and priority assessment.
+
+Root Cause Analysis & Investigation:
+Identify the Discrepancy: Investigate why the bug manifested in UAT but not in SIT/QA. This could be due to:
+Environmental Differences: Variations in data, configurations, integrations, or infrastructure between environments.
+Test Coverage Gaps: Scenarios or specific data combinations tested in UAT that were not adequately covered in SIT/QA.
+User Behavior Simulation: UAT often involves real user scenarios and data, which might uncover issues missed in more controlled testing.
+Timing or Load-Related Issues: Bugs that only appear under specific load conditions or after a certain period of system usage.
+Collaborate for Understanding: Work with developers and other QA team members to understand the potential root cause.
+
+
+12. qa raised the bug, dev is not accepting?
+-> 
+
+
+13. you raised the bug, dev says this is not a bug?
+-> When a developer disagrees with a bug raised by QA, the first step is for the QA engineer to understand the developer's perspective. This involves clarifying the issue, reviewing requirements, and potentially escalating to a product manager or business analyst if needed. If the issue is not a bug, the ticket can be closed with appropriate documentation. 
+
+
+14. you raised the bug by mistake, how do you deal?
+-> If QA raises a bug by mistake, they should immediately acknowledge the error, investigate the root cause, and take steps to prevent future occurrences. This includes documenting the mistake, communicating with the relevant teams, and updating testing processes. 
+
+
+15. what is a negative test case and why do we need negative test case?
+-> A negative test case is a test designed to verify how a system behaves when presented with invalid, unexpected, or incorrect input. It aims to identify defects and ensure the system handles errors gracefully, rather than crashing or producing unexpected results. These tests are crucial for enhancing software reliability, security, and overall quality by uncovering potential issues that might be missed during positive testing with valid inputs.
+
+
+Automation Questions:
+What is inheritance and give an example if you have used it?
+-> Inheritance is a core concept in object-oriented programming (OOP) where a child class can inherit properties and behaviors from parent class. This allows for code reuse and the creation of a hierarchy of classes based on shared characteristics. 
+If I have to give the real world example... Imagine a parent class called "Animal." This class might have attributes like "name" and methods like "eat()". A child class called "Dog" can inherit these attributes and methods, and also add its own, like "bark()" and "breed". Thus, a "Dog" object has properties of both "Animal" and "Dog". 
+
+
+how do you convert string to array?
+-> In Java, converting a String to an array can be done in several ways, depending on whether you want an array of characters (char[]) or an array of String objects (String[]).To convert a String to a char[] is by using the toCharArray() method of the String class.To convert a String into an array of String objects, you can use the split() method of the String class.
+
+
+overloading and overriding in inheritance?
+-> Method overloading allows a class to have multiple methods with the same name but different parameters within the same class. The methods must differ in the number of parameters, the data types of the parameters, or the order of the parameter types. The return type can be the same or different. Method overloading is an example of compile-time polymorphism (static binding). 
+Method overriding occurs when a subclass provides a specific implementation for a method that is already defined in its superclass. The overridden method in the subclass must have the same method signature (name, number and type of parameters, and return type) as the method in the superclass. Method overriding is an example of runtime polymorphism (dynamic binding) and requires an inheritance relationship. The @Override annotation is commonly used to indicate that a method is intended to override a superclass method.
+
+
+how you will trigger execution for xml in testing?
+-> Open the testng.xml file (or a similar configuration file) in the IDE's project explorer. Right-click on the file and select "Run As" > "TestNG Suite" (or a similar option depending on the IDE and plugin). This initiates the test execution based on the XML configuration.
+If using Maven for project management, navigate to the project's root directory in the command line and execute the command: mvn test
+
+
+what data provider is used in testng?
+-> TestNG itself provides the DataProvider mechanism for supplying data to test methods. It is not a separate external data provider, but rather an integral feature of the TestNG framework.
+You define a method within your test class or a separate class using the @DataProvider annotation. This method is responsible for returning the test data.
+This allows you to execute the same test method multiple times with different sets of input data, enabling efficient data-driven testing.
+
+
+your approach to test login page with 4 diff type of user roles (ex: client, admin, etc etc)?
+-> 
+
+
+what is the role of assertion in your test case?
+-> In software testing, assertions are crucial for validating that the actual outcome of a test step matches the expected outcome, ensuring the software behaves as intended. They act as checkpoints, verifying conditions within the test and signaling failures when those conditions are not met. Without assertions, it's impossible to determine if a test has truly passed or failed, making them essential for reliable test automation and debugging.
+
+
+do you know how to handle chrome versions?
+-> Chrome for Testing (CfT):
+Dedicated Browser for Automation: Chrome for Testing is a dedicated version of Chrome built specifically for automated testing, providing more reliable and consistent behavior across different environments.
+Version Control: CfT allows you to download and use specific versions of Chrome, ensuring your tests run against the exact browser environment you intend. This is crucial for reproducing bugs or testing against older browser versions.
+Selenium Manager Integration: With Selenium Manager, the process of handling CfT and its corresponding ChromeDriver is simplified, as it can automatically download and configure the correct versions.
+
+how to clone a repository in GIT?
+-> Open your terminal or command prompt.
+Navigate to the directory where you want to store the cloned repository. For example, use cd path/to/your/directory. 
+Obtain the repository's URL.
+This can be found on the repository's page on platforms like GitHub, GitLab, or Bitbucket. You will typically find options for HTTPS or SSH URLs. 
+Execute the git clone command.
+In your terminal, type git clone followed by the repository's URL.
+
+you are working on a branch, and someone else working on diff branch - can you get their code?
+-> 1. Fetching the Remote Branch:
+First, you need to ensure your local repository is aware of the remote branch and its latest commits.
+Command: git fetch origin <other-branch-name>
+This command retrieves the changes from the specified remote branch (<other-branch-name>) on the origin remote, but it does not automatically integrate them into your current local branch.
+2. Integrating the Changes:
+After fetching, you have two primary ways to integrate the changes from the other branch into your current branch:
+Merging: This combines the history of the two branches, creating a new merge commit.
+Command:  git merge origin/<other-branch-name>
+This is suitable when you want to preserve the history of both branches.
+
+input = test engineer
+write code to print it in reverse format like?
+output = tset reengine
+
+-> class Main {
+    public static void main(String[] args) {
+        String input= "test engineer";
+        String rev="";
+        
+        for(int i=input.length()-1; i>=0; i--)
+        {
+            rev= rev+ input.charAt(i);
+        }
+        
+        String a[]= rev.split(" ");
+        String revString="";
+        
+        for(int i= a.length-1; i>=0; i--)
+        {
+            revString= revString+ a[i]+ " ";
+        }
+        
+        System.out.println("Reverse string is: "+revString);
+    }
+}
+
+123, 456, 789 - this is the input
+write a code to have the following output - 321, 654, 987
+
+->class Main {
+    public static void main(String[] args) {
+    String input= "123, 456, 789";
+    
+    String numbers[]= input.split(", ");
+    
+    StringBuilder output= new StringBuilder();
+    
+    for(int i=0; i<numbers.length; i++)
+    {
+        String num= numbers[i].trim();
+        String reversed= new StringBuilder(num).reverse().toString();
+        
+        output.append(reversed);
+        
+        if(i< numbers.length-1)
+        {
+            output.append(", ");
+        }
+    }
+    
+    System.out.println("Output: "+output.toString());
+       
+    }
+}
+
+Write a Xpath from w3school web page?
+->
+
+do you know about exception handling?
+-> When an unexpected event occurs during program execution, an exception is "thrown," which can then be "caught" and handled, preventing the program from crashing, is called as exception handling.
+Checked Exceptions:
+    These are exceptions that the compiler forces you to handle (e.g., IOException, SQLException). You must either catch them or declare them using throws.
+Unchecked Exceptions (Runtime Exceptions):
+    These are exceptions that do not require explicit handling by the compiler (e.g., ArithmeticException, NullPointerException). While you can handle them, it's often an          indication of a programming error that should be fixed.
+Errors:
+    These are serious problems that typically indicate unrecoverable issues with the Java Virtual Machine (JVM) itself (e.g., OutOfMemoryError, StackOverflowError). Errors are generally not meant to be caught and handled by applications.
+
+try block:
+   This block encloses the code that might potentially throw an exception.
+catch block:
+   This block immediately follows a try block and specifies the type of exception it can handle. If an exception of that type (or a subclass) is thrown within the try block, the corresponding catch block is executed.
+finally block:
+   This optional block follows try and catch blocks. The code within the finally block is guaranteed to execute, regardless of whether an exception occurred or was handled. It is commonly used for resource cleanup (e.g., closing files or database connections).
+throw keyword:
+    Used to explicitly throw an exception object, either a built-in Java exception or a custom exception defined by the developer.
+throws keyword:
+    Used in a method signature to declare that a method might throw one or more specified checked exceptions. This forces calling methods to either handle the exception or declare it themselves.
+
+
+Explain your current framework?
+->
+
+where do you keep your test data and how do you handle data?
+->
+
+at what level you read out the data from excel?
+->
+
+where your driver object is created?
+->
+
+write a pseudo code where you will be validating all city names (out of three dropdowns, country, state and city)?
+navigaed to one page having one dropdown - select country?
+now second dropdown will appear with  state - maharashtra
+now third dropdown will appear for city - you need to validate list of 15 city names?
+->
+
+if there are multiple windows, how do you get on to the required windows?
+->
+
+BDD - what is diff between scenario and scenario outline?
+-> 
+Scenario:
+Represents a single, specific test case with fixed input values.
+Executes only once.
+Used when the test logic does not need to be repeated with different data sets.
+Code:     
+	Scenario: Successful Login
+      Given I am on the login page
+      When I enter "user1" and "password123"
+      And I click the login button
+      Then I should be logged in successfully
+
+Scenario Outline:
+Acts as a template for a scenario that can be executed multiple times with different data sets. 
+Uses placeholders (e.g., <username>, <password>) within the steps, which are then populated by values from an Examples table.
+Each row in the Examples table represents a distinct execution of the scenario outline.
+Ideal for data-driven testing, reducing redundancy when testing the same functionality with varying inputs.
+Code:     
+	Scenario Outline: Login with various credentials
+      Given I am on the login page
+      When I enter "<username>" and "<password>"
+      And I click the login button
+      Then I should see "<expected_message>"
+
+      Examples:
+        | username | password | expected_message      |
+        | user1    | pass1    | Login successful      |
+        | user2    | invalid  | Invalid credentials   |
+        |          | pass3    | Username is required  |
+
+
+
+Test Ng: how do we execute 3 tests in parallel?
+->
+
+soft assert and hard assert difference?
+->
+
+xpath or css which is better
+->
+
+write xpath - w3schools - CSS - CSS XXXX?
+->
+
+What is index out of bound exception?
+-> An "Index Out of Bounds Exception" in Java is a runtime error that occurs when a program attempts to access an element of a sequence (such as an array, string, or list) using an index that is outside the valid range of indices for that sequence.
+These exceptions are "unchecked exceptions," meaning the compiler does not require you to explicitly handle them.
+ArrayIndexOutOfBoundsException: This is the most common form and occurs when you try to access an array element using an index that is either negative or greater than or equal to the size of the array. For an array of size N, valid indices range from 0 to N-1.
+StringIndexOutOfBoundsException: This occurs when you try to access a character in a String using an index that is negative or greater than or equal to the length of the string. 
+Using try-catch blocks: To gracefully handle the exception if it does occur, although preventing it is generally preferred.
+
+
+while execution - getting an error, element is not available
+when you check element manually, everything seems to be ok.  what do you think why is it failing?
+-> When an element is manually verifiable but automation fails with an "element not available" error, several factors could be at play:
+Timing Issues:
+The most common cause is that the automation script attempts to interact with the element before it has fully loaded or become available in the Document Object Model (DOM). This is particularly prevalent in dynamic web applications that use AJAX or JavaScript to load content asynchronously.
+Solution: Implement explicit waits (e.g., WebDriverWait in Selenium) to wait for specific conditions, such as element visibility, clickability, or presence in the DOM, before attempting interaction.
+Incorrect Locator:
+Even if the element is present, the locator used in the automation script might be incorrect or outdated. Changes in the web page's structure (e.g., ID changes, XPath modifications) can lead to the locator no longer pointing to the correct element.
+Solution: Re-verify the locator using browser developer tools and update the script if necessary. Consider using robust locators that are less prone to breaking with minor UI changes.
+Element Obscured or Hidden:
+The element might be present in the DOM but visually hidden or obscured by other elements (e.g., pop-ups, modal windows, overlapping elements) at the time of automation execution.
+Solution: Ensure that any obscuring elements are handled (e.g., closed, dismissed) before attempting to interact with the target element. Verify the element's visibility status using methods like isDisplayed().
+Element within an iframe or Shadow DOM:
+If the element is located within an iframe or a Shadow DOM, the automation script needs to switch contexts to interact with it. Without switching, the element will not be directly accessible from the main page's DOM. 
+Solution: Use appropriate commands to switch to the correct iframe or access the Shadow DOM before attempting to locate the element.
+Dynamic Element Properties:
+The element's properties (e.g., ID, class name) might be dynamically generated during runtime, making static locators unreliable.
+Solution: Use more flexible locators (e.g., partial link text, CSS selectors based on stable attributes, or relative XPaths) that are less dependent on volatile properties.
+Stale Element Reference:
+If the DOM changes between the time an element is located and when an action is attempted on it, a StaleElementReferenceException might occur.
+Solution: Relocate the element if a StaleElementReferenceException is encountered.
+
+Print Fibonacci series?
+-> 
+
+1.Annotations->
+
+2.Difference between @Beforementhod and @aftermethod?
+->
+
+3.@Test?->
+
+4.@BeforeTest-> 
+
+5.@AfterTest-> 
+
+6.how to execute 5testcases using 5 different test data using TESTNG?
+-> To execute five different test cases using five different sets of test data in TestNG, you can leverage TestNG's @DataProvider annotation and a single test method, or use multiple test methods with individual data sets.
+
+7.Select class? ->
+
+
+8.Suppose 3 dropdowns Country,State,Town how to write script using select class?
+->
+
+
+9.what is Background in cucumber?
+-> In Cucumber, the Background keyword in a Gherkin feature file is used to define a set of common steps that are executed before each scenario within that feature file.
+Key Characteristics of Background:
+It is placed before the first Scenario or Scenario Outline in a feature file, at the same level of indentation.
+It typically contains Given steps, setting up the necessary conditions.
+The steps within a Background are executed before each scenario in the feature file, but after any @Before hooks defined in the step definitions.
+A feature file can only have one Background. If different sets of common steps are required for different scenarios, separate feature files should be created.
+
+
+10.xpath & CSS which is better?
+-> Each excels in different contexts due to their distinct capabilities and syntax.
+CSS Selectors:
+Strengths:
+Generally simpler and more concise for common element selections, especially when targeting elements based on IDs, classes, or direct parent-child relationships. They are often faster in modern browsers due to optimized native CSS engines.
+Limitations:
+Cannot traverse backward in the DOM (e.g., selecting a parent element from a child), nor can they select elements based on their text content.
+
+XPath:
+Strengths:
+More powerful and flexible, allowing for complex selections including backward traversal in the DOM (parent, ancestor), selection based on text content, and navigating through siblings or specific positions within a node set. Essential for scenarios where CSS selectors are insufficient.
+Limitations:
+Syntax can be more verbose and complex than CSS selectors, especially for simple selections.
+
+
+11.soft assert & hard assert?
+-> Hard Assertions:
+Hard assertions immediately stop the execution of the test method if an assertion fails. An AssertionError is thrown, and no further code within that test method will be executed.
+Hard assertions are suitable for critical validations where the failure of a particular step makes subsequent steps irrelevant or impossible to execute meaningfully. For example, if a browser fails to launch or a login fails, it's appropriate to stop the test immediately.
+In TestNG, hard assertions are typically used directly from the org.testng.Assert class (e.g., Assert.assertEquals(), Assert.assertTrue()).
+Soft Assertions:
+Behavior:
+Soft assertions, also known as "verify" assertions, do not immediately stop the test execution when an assertion fails. Instead, they record the failure and allow the test method to continue executing subsequent steps. All recorded failures are then reported at the end of the test method, typically by calling a method like assertAll().
+Use Cases:
+Soft assertions are beneficial when you want to perform multiple validations within a single test method, even if some of them fail. This allows for a more comprehensive report of all issues discovered in a single test run. Examples include validating multiple elements on a webpage or checking various data points after a successful operation.
+Implementation:
+In TestNG, soft assertions are implemented using the org.testng.asserts.SoftAssert class. An instance of SoftAssert is created, and its methods (e.g., softAssert.assertEquals()) are used for validations. Finally, softAssert.assertAll() must be called at the end of the test method to report any accumulated failures.
+
+
+
+what is verbose in testNG?
+-> In TestNG, "verbose" refers to a configuration setting that controls the amount of logging information displayed on the console during test execution. It determines the level of detail provided about the test run, such as information about tests, methods, and listeners.
+The verbosity level is typically set within the testng.xml file using the verbose attribute on the <suite> tag. The value for verbose can range from 0 to 10, where:
+0: Represents minimal logging, showing only essential information like test failures.
+10:Represents the most detailed logging, providing extensive information about each step of the test execution.
+Additionally, a value of -1 can be used to put TestNG in debug mode, which provides even more comprehensive output, including full stack traces for exceptions.
+
+
+what is thread-count in testing?
+-> In TestNG, thread-count is an attribute used in the testng.xml configuration file to specify the maximum number of threads that TestNG should use when executing tests in parallel. It directly controls the level of concurrency in your test suite.
+thread-count is effective when parallel execution is enabled in your testng.xml, without a parallel attribute, thread-count has no impact on execution.
+
+

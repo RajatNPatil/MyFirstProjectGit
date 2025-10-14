@@ -1,0 +1,60 @@
+Barclays:
+
+String Manipulation
+Exception Handling
+Collections
+
+API
+1.url and uri difference
+2. what is json schema
+3.serverside and client side eror codes
+4..raml and .yaml difference?
+5. what is mean by swagger documentation?
+6. response validator?
+7. what is payload?
+rest assured
+8.nested response validations using  using rest assured?
+9. pojo classes(serealization and de serealization)?
+3. where you stored your payloads?
+4. utility?
+5.framework optimization?
+6.api chaining using rest assured.
+
+Manual Testing, SQL, Joins, DevOps, CICD
+
+Selenium:
+xpath optimization
+ scrolling in webtable using selenium
+ handling web elements---> using contains starts with or css
+ why we not use thread.sleep ?
+fluent wait syntax, screenshot syntax
+itest listeners, how to customize extend reports
+ how to use log4j?
+different types of reports
+BDD: what is runner class? what is test runner?
+what is dry run in BDD
+ login test cases using BDD test cases
+how to make grouping in bdd cucumber?
+ how to execute different test cases on different browsers and operating systems using browser stack?
+window handles, frames inside frames, handling hidden frames?
+git:push,pull,stash  
+git and github difference
+staging area's 
+what is git command for Pr requests?
+how to transfer your code from 1 repository to another repository using command prompt?
+CI CD difference
+what is pipeline?
+what is the process to deploy the code?
+how to create a job in Jenkins?
+what are shell commands?
+
+maven interview questions:: 
+1.Maven life cycle?
+2.maven commands and differences?
+3.what is the use of sure fire plugin?
+4.use of maven test command?
+5.how do you do the variables in maven?
+6.how to create profile in maven using pom.xml?
+
+
+Trainings:

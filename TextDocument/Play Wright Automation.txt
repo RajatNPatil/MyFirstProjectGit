@@ -1,0 +1,25 @@
+Play Wright Automation:
+
+Install Node.js and VS Code as pre-requisites.
+In VS Code Open one empty folder(created for project)
+Open terminal and run command: npm init playwright
+It will install all node modules required
+
+First Test:
+UIBasics.spec.js
+
+import @playwright/test
+Create test
+Add async before function to write await functions.
+functions are asynchronous
+
+
+To run debugging tests: npx playwright test --debug
+
+To record and playback: npx playwright codegen https://www.google.com/
+
+To run from UI Test runner: npx playwright test --ui
+
+
+
+

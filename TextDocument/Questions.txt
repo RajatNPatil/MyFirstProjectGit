@@ -1,0 +1,164 @@
+Questions:
+
+Check if Two Strings are Anagrams?
+Missing number in an array?
+How do you find zero in an array?
+Write a java program to rotate an array by k positions?
+Without changing sequence write a java programs less than 10, greater than 10.
+What is the difference between HashMap and ConcurrentMap?
+What is the difference between HashMap and HashTable?
+
+Q. what is the difference between Factory and Utility classes in java selenium
+-> 🏭 Factory Class
+🔹 Purpose:
+Used to create and initialize objects, especially Page Objects in the Page Object Model (POM).
+🔹 Common Use Case:
+
+Instantiating page classes using PageFactory from Selenium.
+Encapsulating object creation logic.
+
+Ex.
+public class PageFactoryManager {
+    public static LoginPage getLoginPage(WebDriver driver) {
+        return PageFactory.initElements(driver, LoginPage.class);
+    }
+
+    public static DashboardPage getDashboardPage(WebDriver driver) {
+        return PageFactory.initElements(driver, DashboardPage.class);
+    }
+}
+
+🧰 Utility Class
+🔹 Purpose:
+Provides reusable helper methods that perform common tasks like:
+
+Reading data from files
+Waiting for elements
+Taking screenshots
+Logging
+
+Q. What are the new features in Java 8?
+->
+1. Lambda Expressions
+
+Enables functional-style programming.
+Syntax: (parameters) -> expression
+Example:
+List<String> names = Arrays.asList("Rajat", "Priyanka", "Murugan");
+names.forEach(name -> System.out.println(name));
+
+2.Functional Interfaces
+
+Interfaces with a single abstract method.
+Annotated with @FunctionalInterface.
+Example: Runnable, Comparator, Predicate, Function.
+
+3. Streams API
+
+Allows processing collections in a functional style.
+Supports operations like map, filter, reduce, collect.
+Example:
+List<String> names = Arrays.asList("Rajat", "Priyanka", "Murugan");
+names.stream().filter(n -> n.startsWith("P")).forEach(System.out::println);
+
+4. Default Methods in Interfaces
+
+Allows interfaces to have method implementations.
+Helps in backward compatibility.
+Example:
+interface MyInterface {
+    default void show() {
+        System.out.println("Default method");
+    }
+}
+
+
+5. Method References
+
+Shorthand for calling methods using ::
+Example:
+names.forEach(System.out::println);
+
+
+6. Optional Class
+
+Avoids NullPointerException by wrapping values that may be null.
+Example:
+Optional<String> name = Optional.ofNullable("Rajat");
+name.ifPresent(System.out::println);
+
+
+7. New Date and Time API (java.time)
+
+Replaces old java.util.Date and Calendar.
+Immutable and thread-safe.
+Example:
+LocalDate today = LocalDate.now();
+LocalDate birthday = LocalDate.of(1990, Month.JANUARY, 1);
+
+
+8. Collectors and Grouping
+
+Used with streams to collect results.
+Example:
+Map<String, List<String>> grouped = names.stream()
+    .collect(Collectors.groupingBy(name -> name.substring(0, 1)));
+
+
+9. Nashorn JavaScript Engine
+
+Allows execution of JavaScript code within Java applications.
+
+
+10. Parallel Streams
+
+Enables parallel processing of collections.
+Example:
+names.parallelStream().forEach(System.out::println);
+
+
+Q. Use of java features like collect, filter, map?
+-> In Java 8, the map, filter, and collect methods are part of the Streams API, which allows you to process collections in a functional and declarative style. Here's a breakdown of their uses with examples:
+🔹 filter()
+Used to select elements that match a condition.
+List<String> names = Arrays.asList("Rajat", "Priyanka", "Murugan", "Ram");
+List<String> filtered = names.stream()
+    .filter(name -> name.startsWith("R"))
+    .collect(Collectors.toList());
+
+System.out.println(filtered); // Output: [Rajat, Ram]
+
+🔹 map()
+Used to transform elements in a stream.
+List<String> names = Arrays.asList("rajat", "priyanka", "murugan");
+List<String> uppercased = names.stream()
+    .map(String::toUpperCase)
+    .collect(Collectors.toList());
+
+System.out.println(uppercased); // Output: [RAJAT, PRIYANKA, MURUGAN]
+
+🔹 collect()
+Used to gather the results of a stream into a collection or other structure.
+List<String> names = Arrays.asList("Rajat", "Priyanka", "Murugan");
+String joined = names.stream()
+    .collect(Collectors.joining(", "));
+
+System.out.println(joined); // Output: Rajat, Priyanka, Murugan
+
+🔄 Combined Example
+List<String> names = Arrays.asList("rajat", "priyanka", "murugan", "ram");
+
+List<String> result = names.stream()
+    .filter(name -> name.startsWith("r"))         // filter names starting with 'r'
+    .map(String::toUpperCase)                     // convert to uppercase
+    .collect(Collectors.toList());                // collect into a list
+
+System.out.println(result); // Output: [RAJAT, RAM]
+
+
+
+
+
+
+
+

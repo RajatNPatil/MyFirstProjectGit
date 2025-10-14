@@ -1,0 +1,26 @@
+Assignments
+
+
+
+
+
+
+
+
+Assignment 1 for today  input String str="JAVA123PROGRAM45";
+output JAVAPROGRAM  12345
+
+
+
+
+
+
+
+
+
+
+
+
+Assignment 2  find Unique Characters in String
+String str = "5ddddpljhtt9648555pf"
+ 

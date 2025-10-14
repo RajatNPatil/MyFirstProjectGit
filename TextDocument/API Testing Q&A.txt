@@ -1,0 +1,68 @@
+API Testing Q&A:
+
+Basic API Testing Questions
+
+What is an API?
+What is API testing and why is it important?
+What are the types of APIs?
+What is the difference between SOAP and REST APIs?
+What are the common HTTP methods used in RESTful APIs?
+What is the difference between PUT and POST?
+What is the status code 200, 201, 400, 401, 403, 404, and 500?
+
+Intermediate-Level Questions
+
+How do you perform API testing manually?
+What tools have you used for API testing?
+What is Postman and how do you use it for API testing?
+What is the difference between functional and non-functional API testing?
+How do you validate response time and performance of an API?
+What is JSON and how is it used in APIs?
+How do you handle authentication in API testing (e.g., OAuth, API keys)?
+
+Core API Testing Questions
+
+What is API testing and why is it important?
+What are the key differences between UI testing and API testing?
+What are the common HTTP methods used in REST APIs?
+What is the difference between PUT and POST?
+What are the most common HTTP status codes and their meanings?
+How do you validate the response of an API?
+What is the difference between SOAP and REST APIs?
+
+Testing Techniques & Scenarios
+
+How do you test an API manually?
+How do you test an API with authentication (e.g., OAuth, JWT, API keys)?
+How do you test negative scenarios in API testing?
+How do you test performance and response time of an API?
+What is schema validation in API testing?
+How do you test pagination in APIs?
+How do you handle dynamic data in API testing?
+
+Tools & Automation
+
+What tools have you used for API testing? (e.g., Postman, Rest Assured, SoapUI, JMeter)
+How do you write test scripts in Postman?
+What is a Postman collection and how do you use it?
+How do you automate API tests using Rest Assured / Postman / Karate / etc.?
+How do you integrate API tests into CI/CD pipelines?
+
+Advanced Concepts
+
+What is contract testing in APIs?
+What is mocking in API testing and when would you use it?
+What is the difference between functional and non-functional API testing?
+How do you test APIs that interact with databases or third-party services?
+What are idempotent operations in REST APIs?
+How do you handle rate limiting and throttling in API testing?
+
+Advanced-Level Questions
+
+How do you automate API tests?
+What is a mock server and when would you use one?
+How do you test APIs with dynamic data?
+What is contract testing in APIs?
+How do you handle rate limiting in API testing?
+What is the role of schema validation in API testing?
+How do you test error handling and edge cases in APIs?
