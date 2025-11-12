@@ -1,0 +1,136 @@
+//package Multithreading;
+class InsufficientFundsException extends Exception
+{
+	String name;
+	public InsufficientFundsException(String name) 
+	{
+		this.name=name;
+	}
+	public String getErrorMessage()
+	{
+		return this.name;
+	}
+}
+class Account
+{
+	int balance;
+	Account(int balance)
+	{
+		this.balance=balance;
+	}
+	public int getBalance()
+	{
+		return this.balance;
+	}
+	public synchronized void withdraw(int amount) throws InsufficientFundsException
+	{
+		System.out.println("Withdrawal amount:"+amount);
+		if(amount<=this.balance)
+		{
+			this.balance=this.balance-amount;
+		}
+		else
+		{
+			throw new InsufficientFundsException("No funds");
+		}
+	}
+}
+class AccountThread extends Thread
+{
+	Account atm;
+	int amount;
+	AccountThread(Account atm,int amount)
+	{
+		this.atm=atm;
+		this.amount=amount;
+	}
+	public void run()
+	{
+		try
+		{
+			atm.withdraw(amount);
+		}
+		catch(InsufficientFundsException ie)
+		{
+			System.out.println(ie.getErrorMessage());
+		}
+	}
+}
+public class ThreadSynchronizationwithuserdefinedexception 
+{
+ 
+	public static void main(String[] args) throws Exception
+	{
+		Account acc=new Account(6000);
+		System.out.println("Current available balance:"+acc.getBalance());
+		AccountThread t1=new AccountThread(acc,4000);
+		AccountThread t2=new AccountThread(acc,3000);
+		t1.start();
+		t2.start();
+		t1.join();
+		t2.join();
+		System.out.println("Current available balance="+acc.getBalance());
+
+ 
+	}
+ 
+}
+
+------------------------------------------------------------------------------------------
+
+
+//package Multithreading;
+class Counter 
+{
+	int count;
+	public synchronized void increment()
+	{
+		count++;
+	}
+}
+public class Threadsynchronization 
+{
+ 
+	public static void main(String[] args) throws Exception
+	{
+		Counter c=new Counter();
+		Thread t1=new Thread(new Runnable()
+				{
+					public void run()
+					{
+						for(int i=1;i<=1000;i++)
+							c.increment();
+					}
+				});
+
+		Thread t2=new Thread(new Runnable()
+		{
+			public void run()
+			{
+				for(int i=1;i<=1000;i++)
+					c.increment();
+			}
+		});
+		t1.start();
+		t2.start();
+			t1.join();
+			t2.join();
+		System.out.println(c.count);
+
+ 
+	}
+ 
+}
+
+-----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
