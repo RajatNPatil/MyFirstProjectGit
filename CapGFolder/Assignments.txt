@@ -1,135 +1,26 @@
-Thursday:
+Assignments
 
-1) Write the classes Line, Rectangle, Cube etc. & make the Shape as their base class. Add an abstract draw() method in the class Shape & draw all shapes.
 
-2) Write a program that describes the hierarchy of an organization. Here we need to write 3 classes Employee, Manager & Labour where Manager & Labour are the sub classes of the Employee. Manager has incentive & Labour has over time. Add the functionality to calculate total salary of all the employees. Use polymorphism i.e. method overriding.
+
+
+
+
+
+
+Assignment 1 for today  input String str="JAVA123PROGRAM45";
+output JAVAPROGRAM  12345
+
+
+
+
+
+
+
+
+
+
+
+
+Assignment 2  find Unique Characters in String
+String str = "5ddddpljhtt9648555pf"
  
-3) Write a program to consider saving & current account in the bank. Saving account holder has ‘Fixed Deposits’ whereas Current account holder has cash credit. Apply polymorphism to find out total cash in the bank.
-
-4) Develop an application for Dessert shop. The application should allow owner to add items like Candy, Cookie or Ice Cream in the shop storage. Also customers should be able to place an order.
-
-------------------------------------------------------------------------------------------------------------------------------------
-
-Friday:
-
-1. Write a program to generate Armstrong numbers between given range and store them into an array using method calling. Retrieve the same and print on to the screen.
-
-2. Calculate the income tax on the basis of following taAble.
-Note:-Assume slab is consider for Male, Female as well as Senior citizen
-Slab                                  Income Range                            Tax payable
-Slab A                              0-1,80,000                                     Nil
-Slab B                              1,81,001-3,00,000                              10%
-Slab C                              3,00,001-5,00,000                              20%
-Slab D                              5,00,001-10,00,000                             30%
-Accept CTC from user and display tax amount
-
-3. You are given a basic login system that supports only one hardcoded user. Extend the program to support multiple users by storing user credentials in two parallel arrays: one for userIds and one for passwords.
-  1. Store atleast 3 user credentials using two arrays
-  2. Modify the loginUser method to check if the entered userId and password match any pair in the arrays
-  3. Allow a maximum of 3 login attempts
-  4. Display a welcome message if login is successful
-  5. After 3 failed attempts, display an error message and terminate the program
-
-4. Write a Java program to store marks of 3 students in 3 subjects(A,B and C).
-	a.Use a Student class with three fields: subjectA, subjectB and subject
-	b.Create 3 student objects with simple marks
-	c. Calculate and print
-             i. Total marks of all students in all subjects
-             ii. Average marks of all students in all subjects
-             iii. Total and average marks for each subject(A,B and C)
- 
------------------------------------------------------------------------------------------------------------------------------------------------------
-
-Monday:
-
-1. Write a program that takes as input the size of the array and the elements in the array.
-The program then asks the user to enter a particular index and prints the element at that index.
-Index  starts from zero. 
- 
-This program may generate Array Index Out Of Bounds Exception  or NumberFormatException. 
-Use exception handling mechanisms to handle this exception.
- 
-Sample Input and Output 1:
-Enter the number of elements in the array
-2
-Enter the elements in the array
-50
-80
-Enter the index of the array element you want to access
-1
-The array element at index 1 = 80
-The array element successfully accessed
- 
- 
-Sample Input and Output 2:
-Enter the number of elements in the array
-2
-Enter the elements in the array
-50
-80
-Enter the index of the array element you want to access
-9
-java.lang.ArrayIndexOutOfBoundsException
- 
- 
-Sample Input and Output 3:
-Enter the number of elements in the array
-2
-Enter the elements in the array
-30
-j
-java.lang.NumberFormatException
-2. A student portal provides user to register their profile. During registration the system needs
-to validate the user should be located in India. If not the system should throw an exception.
-Step 1: Create a user defined exception class named “InvalidCountryException”.
-Step 2: Overload the respective constructors.
-Step 3: Create a main class “UserRegistration”, add the following method,
-registerUser– The parameter are String username,String userCountry and add the following logic,
-• if userCountry is not equal to  “India” throw a InvalidCountryException with the message
-“User Outside India  cannot be registered”
-• if userCountry is equal to  “India”,  print the message “User registration done successfully”
-Invoke the method registerUser from the main method with the data specified and see how the program behaves
-Sample Input and Output
-Name Country Expected Output
-Mickey US InvalidCountryException should be thrown.
-The message should be “User Outside India  cannot be registered”
-Mini India The message should be “User registration done successfully”
-3. Execution of two or more threads occurs in a random order. The keyword 'synchronized' in Java is used to control the execution of thread in a strict sequence. In the following, the program is expected to print the output as given below. Do the necessary use of 'synchronized' keyword, so that, the program prints the Final sum as given below:
-Output: Final Sum:6000
-A simple class that demonstrates using the 'synchronized' keyword so that multiple threads may send it messages. The class stores two ints, a and b; sum() returns their sum, and inc() increments both numbers.
-The sum() and incr() methods form a "critical section" --they can compute the wrong thing if run by multiple threadsat the same time. The sum() and inc() methods are declared"synchronized" -- they respect the lock in the receiver object.
-4. Write a program to count the number of times a character appears in the File. (Case insensitive... 'a' and 'A' are considered to be the same).
-
-
-
-------------------------------------------------------------------------------------------------------------------------------------------------
-
-Tuesday:
-
-1. Write a class Person having weight, height & name. Create multiple person objects print them in the sorted order. In the sorting order first sort based upon their weight & it two persons have same weight them sort them based upon their height. Use TreeSet.
-
-2. Write a program using Hashtable or HashMap where Date of birth is a key & Employee name as value.Design the class Date is such a way where the get method fails if two employees have same day & month of birth but birth year is different.
-
-3. Implement the console based chatting using collections. Here are the options to be placed for to the user:
-
-Options:
-A) Create a chatroom
-B) Add the user
-C) User login
-D) Send a message
-E) Display the messages from a specific chatroom
-F) List down all users belonging to the specified chat room.
-G) Logout
-H) Delete an user
-I) Delete the chat room.
-Please enter your option:
-
-1. Create class Movie_Details with field’s mov_Name, lead_actor, lead_actories, and genre add setter and getter method in that class.
-
-2. After creating this class create class Movie_DetailsList class who will maintain all the objects.
-
-3. Movie_DetailsList class should have method add_movie(), remove_movie(), remove_AllMovies(), find_movie_By_mov_Name(), find_movie_By_Genre()
-
-4. Movie_DetailsList should have method which will take an argument that will be use to determine on which to sort
-
------------------------------------------------------------------------------------------------------------------------------------------------------
