@@ -1,0 +1,7 @@
+Serialization and deserialization:
+
+
+1. Serialization: The process to convert object into JSON form.
+
+2. Deserialization: The process to convert JSON into Object.
+

@@ -1,0 +1,10 @@
+TakesScreenshot ts= (TakesScreenshot) driver;
+
+File source= ts.getScreenshotAs(OutputType.FILE);
+File target= new File(System.getProperty(user.dir)+"screenshot//pic.png");
+
+source.renameTo(target);
+
+
+driver.switchTo().window(windowId);
+
