@@ -1,0 +1,5 @@
+Thursday 26-06-2025
+
+1. Go to adactin.com website and give username &password and login
+2. Go to adactin.com website and check that same webpage is opened
+3. Go to adactin.com website, give user name & password and print that user name and password
